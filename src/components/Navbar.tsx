@@ -16,12 +16,12 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-espresso">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-deep border-b border-surface">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Logo */}
         <Link
           href="/"
-          className="font-serif text-xl font-bold text-cream tracking-wide"
+          className="font-serif text-xl font-bold text-blue tracking-wide"
         >
           1776
         </Link>
@@ -32,14 +32,14 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-cream/80 transition-colors hover:text-cream"
+              className="text-sm text-white/60 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="#"
-            className="rounded-full bg-copper px-5 py-2 text-sm font-medium text-cream transition-colors hover:bg-copper-light"
+            className="rounded-full bg-blue px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-dark"
           >
             Order Online
           </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen((prev) => !prev)}
-          className="text-cream md:hidden"
+          className="text-white md:hidden"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,13 +62,13 @@ export default function Navbar() {
           mobileOpen ? 'max-h-64' : 'max-h-0'
         )}
       >
-        <div className="flex flex-col gap-2 border-t border-cream/10 px-4 pb-4 pt-2">
+        <div className="flex flex-col gap-2 border-t border-surface px-4 pb-4 pt-2">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="py-2 text-sm text-cream/80 transition-colors hover:text-cream"
+              className="py-2 text-sm text-white/60 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
           <Link
             href="#"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 inline-block w-fit rounded-full bg-copper px-5 py-2 text-sm font-medium text-cream transition-colors hover:bg-copper-light"
+            className="mt-2 inline-block w-fit rounded-full bg-blue px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-dark"
           >
             Order Online
           </Link>

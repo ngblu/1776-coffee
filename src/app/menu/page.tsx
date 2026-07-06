@@ -158,12 +158,12 @@ export default function MenuPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-espresso text-cream py-24 text-center">
+      <section className="bg-deep py-24 text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-white font-serif text-5xl md:text-6xl font-bold mb-4">
             Our Menu
           </h1>
-          <p className="text-cream/70 text-lg max-w-xl mx-auto">
+          <p className="text-white/50 text-lg max-w-xl mx-auto">
             Handcrafted drinks and fresh food, made with care and served with
             purpose.
           </p>
@@ -172,12 +172,12 @@ export default function MenuPage() {
 
       <section className="max-w-4xl mx-auto px-6 py-16">
         {/* Mobile category pills */}
-        <div className="md:hidden flex overflow-x-auto gap-2 pb-4 -mx-2 px-2 mb-12 scrollbar-hide">
+        <div className="md:hidden flex overflow-x-auto gap-2 pb-4 -mx-2 px-2 mb-12">
           {menuCategories.map((cat) => (
             <a
               key={cat.name}
               href={`#${cat.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="shrink-0 px-4 py-2 bg-white border border-wheat/40 rounded-full text-sm font-medium text-espresso/70 hover:border-amber/50 hover:text-amber transition-colors whitespace-nowrap"
+              className="shrink-0 bg-surface text-white/60 hover:bg-blue hover:text-white rounded-full px-4 py-2 text-sm font-medium transition-colors whitespace-nowrap"
             >
               {cat.name}
             </a>
@@ -191,25 +191,25 @@ export default function MenuPage() {
               key={cat.name}
               id={cat.name.toLowerCase().replace(/\s+/g, "-")}
             >
-              <h2 className="font-serif text-2xl text-espresso mb-1">
+              <h2 className="text-white font-serif text-2xl mb-1">
                 {cat.name}
               </h2>
-              <div className="w-12 h-0.5 bg-amber mb-8" />
+              <div className="border-b-2 border-blue w-12 mb-8" />
               <div className="space-y-4">
                 {cat.items.map((item) => (
                   <div
                     key={item.name}
-                    className="flex justify-between items-baseline gap-4 py-3 border-b border-wheat/20 last:border-0"
+                    className="flex justify-between items-baseline gap-4 py-3 border-b border-white/5 last:border-0"
                   >
                     <div>
-                      <h3 className="font-serif text-lg font-bold text-espresso">
+                      <h3 className="text-white font-bold text-lg">
                         {item.name}
                       </h3>
-                      <p className="text-espresso/50 text-sm mt-0.5">
+                      <p className="text-white/40 text-sm mt-0.5">
                         {item.desc}
                       </p>
                     </div>
-                    <span className="text-amber font-bold shrink-0 text-lg">
+                    <span className="text-blue font-bold shrink-0 text-lg">
                       {item.price}
                     </span>
                   </div>

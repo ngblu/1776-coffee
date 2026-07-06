@@ -26,11 +26,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-cream py-24">
+    <section className="bg-deep py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="font-serif text-4xl text-espresso text-center">
+        <h2 className="font-serif text-4xl text-white text-center">
           What Our Guests Say
         </h2>
+        <div className="w-16 h-1 bg-blue mx-auto mt-4" />
 
         <div className="mt-12 flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:grid md:grid-cols-3 md:overflow-visible md:snap-none md:pb-0">
           {testimonials.map((t, i) => (
@@ -40,15 +41,15 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-espresso/5 min-w-[300px] md:min-w-0 snap-start flex-shrink-0 md:flex-shrink flex flex-col"
+              className="bg-surface rounded-2xl p-8 border border-white/5 hover:border-blue/20 transition-colors min-w-[300px] md:min-w-0 snap-start flex-shrink-0 md:flex-shrink flex flex-col"
             >
-              <Quote className="text-amber/30 size-10" aria-hidden="true" />
-              <p className="mt-4 text-espresso/70 italic flex-1 leading-relaxed">
+              <Quote className="text-blue/20 size-10" aria-hidden="true" />
+              <p className="mt-4 text-white/60 italic flex-1 leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div className="mt-6 pt-4 border-t border-espresso/5">
-                <p className="text-espresso font-medium text-sm">{t.name}</p>
-                <p className="text-espresso/40 text-sm mt-0.5">{t.detail}</p>
+              <div className="mt-6 pt-4 border-t border-blue/20">
+                <p className="text-white/80 font-medium text-sm">{t.name}</p>
+                <p className="text-white/40 text-sm mt-0.5">{t.detail}</p>
               </div>
             </motion.div>
           ))}

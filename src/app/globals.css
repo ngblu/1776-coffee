@@ -1,83 +1,63 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-espresso: #2C1810;
-  --color-espresso-light: #3D2317;
-  --color-cream: #F5F0EB;
-  --color-cream-muted: #E8E0D5;
-  --color-copper: #B87333;
-  --color-copper-light: #D4955E;
-  --color-taupe: #8B7355;
-  --color-amber: #D4A434;
-  --color-wheat: #E8D5B7;
-  --color-brick: #8B3A3A;
-  --color-sage: #7A9B7E;
+  /* Dark moody palette — extracted from reference images */
+  --color-deep: #0b1014;
+  --color-deep-light: #12181c;
+  --color-surface: #1a2124;
+  --color-surface-hover: #252c2f;
+  --color-muted: #5d5f5c;
+  --color-muted-light: #8a8c88;
+
+  /* Primary accent: warm leather/brass taupe */
+  --color-accent: #797568;
+  --color-accent-light: #a8a395;
+  --color-accent-dark: #5a5548;
+
+  /* Subtle navy undertone */
+  --color-navy: #364761;
+
+  /* Alias existing --color-blue tokens to warm palette so agent code works */
+  --color-blue: #797568;
+  --color-blue-glow: #a8a395;
+  --color-blue-dark: #5a5548;
+  --color-warm-gray: #5d5f5c;
+  --color-warm-light: #a8a395;
 
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 
   --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
   --animate-pulse-cta: pulse-cta 2s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
   --animate-stagger-1: fade-in-up 0.5s ease-out 0.1s forwards;
   --animate-stagger-2: fade-in-up 0.5s ease-out 0.2s forwards;
   --animate-stagger-3: fade-in-up 0.5s ease-out 0.3s forwards;
 
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes pulse-cta {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.03);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(121,117,104,0.15); }
+    50% { box-shadow: 0 0 40px rgba(121,117,104,0.3); }
   }
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-cream text-espresso font-sans antialiased;
-  }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-deep text-white/85 font-sans antialiased; }
 }
 
 @layer utilities {
-  .animate-on-scroll {
-    opacity: 0;
-    animation: fade-in-up 0.6s ease-out forwards;
-  }
-
-  .animate-stagger-1 {
-    opacity: 0;
-    animation: fade-in-up 0.5s ease-out 0.1s forwards;
-  }
-
-  .animate-stagger-2 {
-    opacity: 0;
-    animation: fade-in-up 0.5s ease-out 0.2s forwards;
-  }
-
-  .animate-stagger-3 {
-    opacity: 0;
-    animation: fade-in-up 0.5s ease-out 0.3s forwards;
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;

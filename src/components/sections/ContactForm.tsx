@@ -44,19 +44,19 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <section className="bg-cream py-24">
+      <section className="bg-deep py-24">
         <div className="mx-auto max-w-xl px-6 text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", duration: 0.5 }}
           >
-            <CheckCircle className="text-amber size-16 mx-auto" aria-hidden="true" />
+            <CheckCircle className="text-blue size-16 mx-auto" aria-hidden="true" />
           </motion.div>
-          <h2 className="mt-6 font-serif text-3xl text-espresso">
+          <h2 className="mt-6 font-serif text-3xl text-white">
             Thanks! We&apos;ll be in touch.
           </h2>
-          <p className="mt-3 text-espresso/60">
+          <p className="mt-3 text-white/50">
             Your message has been received. We typically respond within 24 hours.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-cream py-24">
+    <section className="bg-deep py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col md:flex-row gap-12">
           {/* Left text */}
@@ -76,8 +76,8 @@ export default function ContactForm() {
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
-            <h2 className="font-serif text-4xl text-espresso">Get In Touch</h2>
-            <p className="mt-4 text-espresso/70 leading-relaxed max-w-md">
+            <h2 className="font-serif text-4xl text-white">Get In Touch</h2>
+            <p className="mt-4 text-white/50 leading-relaxed max-w-md">
               Have a question, want to book our space, or just want to say hello?
               We&apos;d love to hear from you. Fill out the form and we&apos;ll get
               back to you as soon as we can.
@@ -103,10 +103,10 @@ export default function ContactForm() {
                   placeholder="Your Name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full bg-white border border-espresso/10 rounded-xl px-5 py-3 text-espresso placeholder:text-espresso/30 focus:outline-none focus:border-amber focus:ring-2 focus:ring-amber/20 transition"
+                  className="w-full bg-surface border border-white/10 rounded-xl px-5 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-blue focus:ring-2 focus:ring-blue/20 transition"
                 />
                 {errors.name && (
-                  <p className="mt-1 text-brick text-sm">{errors.name}</p>
+                  <p className="mt-1 text-red-400 text-sm">{errors.name}</p>
                 )}
               </div>
 
@@ -120,10 +120,10 @@ export default function ContactForm() {
                   placeholder="Your Email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full bg-white border border-espresso/10 rounded-xl px-5 py-3 text-espresso placeholder:text-espresso/30 focus:outline-none focus:border-amber focus:ring-2 focus:ring-amber/20 transition"
+                  className="w-full bg-surface border border-white/10 rounded-xl px-5 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-blue focus:ring-2 focus:ring-blue/20 transition"
                 />
                 {errors.email && (
-                  <p className="mt-1 text-brick text-sm">{errors.email}</p>
+                  <p className="mt-1 text-red-400 text-sm">{errors.email}</p>
                 )}
               </div>
 
@@ -137,16 +137,16 @@ export default function ContactForm() {
                   placeholder="Your Message"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full bg-white border border-espresso/10 rounded-xl px-5 py-3 text-espresso placeholder:text-espresso/30 focus:outline-none focus:border-amber focus:ring-2 focus:ring-amber/20 transition resize-none"
+                  className="w-full bg-surface border border-white/10 rounded-xl px-5 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-blue focus:ring-2 focus:ring-blue/20 transition resize-none"
                 />
                 {errors.message && (
-                  <p className="mt-1 text-brick text-sm">{errors.message}</p>
+                  <p className="mt-1 text-red-400 text-sm">{errors.message}</p>
                 )}
               </div>
 
               <button
                 type="submit"
-                className="bg-amber text-cream px-8 py-3 rounded-full font-medium transition-all hover:bg-amber/90 hover:shadow-lg"
+                className="bg-blue hover:bg-blue-dark text-white px-8 py-3 rounded-full font-medium transition-all hover:shadow-lg"
               >
                 Send Message
               </button>

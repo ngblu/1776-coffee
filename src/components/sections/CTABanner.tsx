@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export default function CTABanner() {
   return (
-    <section className="relative bg-amber py-20 overflow-hidden">
+    <section className="relative bg-blue py-20 overflow-hidden">
       {/* Diagonal stripe pattern */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.04) 10px, rgba(255,255,255,0.04) 20px)",
+            "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px)",
         }}
       />
 
@@ -21,7 +21,7 @@ export default function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="font-serif text-4xl md:text-5xl text-cream"
+          className="font-serif text-4xl md:text-5xl text-white"
         >
           Ready for Something Exceptional?
         </motion.h2>
@@ -31,7 +31,7 @@ export default function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-cream/80 max-w-xl mx-auto text-lg"
+          className="mt-4 text-white/70 max-w-xl mx-auto text-lg"
         >
           Skip the ordinary. Experience coffee crafted with intention, in a
           space built for connection.
@@ -46,13 +46,13 @@ export default function CTABanner() {
         >
           <a
             href="/order"
-            className="inline-flex items-center bg-cream text-espresso rounded-full px-10 py-4 font-semibold shadow-lg transition-all hover:bg-cream/90 hover:shadow-xl animate-pulse"
+            className="inline-flex items-center bg-white text-blue rounded-full px-10 py-4 font-semibold shadow-lg transition-all hover:bg-white/90 hover:shadow-xl animate-pulse"
           >
             Order Online
           </a>
           <a
             href="/menu"
-            className="inline-flex items-center border-2 border-cream/40 text-cream px-10 py-4 rounded-full font-semibold transition-all hover:border-cream hover:bg-cream/10"
+            className="inline-flex items-center border-2 border-white/40 text-white px-10 py-4 rounded-full font-semibold transition-all hover:border-white"
           >
             View Menu
           </a>

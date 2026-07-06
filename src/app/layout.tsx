@@ -17,13 +17,13 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: '1776 Coffee | Craft Coffee House',
+  title: '1776 Coffee | Dark & Bold',
   description:
-    'Artisan coffee roasted with purpose. Visit 1776 Coffee in Cookeville, TN for handcrafted drinks, fresh pastries, and community.',
+    'Modern craft coffee house with a moody, refined aesthetic. Handcrafted drinks, fresh pastries, and a space built for ritual — visit 1776 Coffee in Cookeville, TN.',
   openGraph: {
-    title: '1776 Coffee | Craft Coffee House',
+    title: '1776 Coffee | Dark & Bold',
     description:
-      'Artisan coffee roasted with purpose. Handcrafted drinks and fresh pastries in Cookeville, TN.',
+      'Modern craft coffee with a moody aesthetic. Handcrafted drinks and fresh pastries in Cookeville, TN.',
     type: 'website',
   },
 }
